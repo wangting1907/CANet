@@ -6,8 +6,8 @@ Installation
 1. Clone the repository:
    
 ```
-git clone https://tis-git.hk.cpolar.io/lijz/202507_CANet.git
-cd 202507_CANet
+git clone https://github.com/wangting1907/CANet
+cd CANet
 ```
 2. Clone the repository:
 
@@ -29,11 +29,11 @@ Usage
   | **`flat`** | Flat-field reference images | `(num_flat, height, width)` or `(1, height, width)` |
   | **`dark`** | Dark-field reference images | `(num_dark, height, width)` or `(1, height, width)` |
 
-    • For tomo_00089 (8346eV), refer to 202507_CANet/tomo_alignment_real_data_0089.ipynb
+    • For tomo_00089 (8346eV), refer to CANet/tomo_alignment_real_data_0089.ipynb
     
-    • For simulated data,  refer to 202507_CANet/tomo_alignment_simulation.ipynb
+    • For simulated data,  refer to CANet/tomo_alignment_simulation.ipynb
    
-   #### Step 2. Spectral data: Download data [tomo_00089](https://tomobank.readthedocs.io/en/latest/source/) into 202507_CANet/Data/XANES_00089
+   #### Step 2. Spectral data: Download data [tomo_00089](https://tomobank.readthedocs.io/en/latest/source/) into CANet/Data/XANES_00089
    
 
 ### 2.   Running (Alignment)
