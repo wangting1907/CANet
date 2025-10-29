@@ -1,0 +1,14 @@
+cupy 
+scikit-build 
+swig 
+pywavelets 
+numexpr 
+astropy 
+olefile 
+opencv
+matplotlib
+
+torch
+torchvision
+torchaudioactic
+skbuild
