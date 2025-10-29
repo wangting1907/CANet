@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared  -o _cfunc_lprec.so CMakeFiles/cfunc_lprec.dir/CMakeFiles/cfunc_lprec.dir/cfunc_lprecPYTHON_wrap.cxx.o CMakeFiles/cfunc_lprec.dir/cfunc_lprec.cu.o   -L/usr/local/cuda-11.8/targets/x86_64-linux/lib/stubs  -L/usr/local/cuda-11.8/targets/x86_64-linux/lib  -lcudart -lcufft -lcudadevrt -lcudart_static -lrt -lpthread -ldl

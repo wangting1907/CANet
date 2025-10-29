@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/cxhpc/data/wt/tomocupy-stream/_skbuild/linux-x86_64-3.13/cmake-build/cmake_install.cmake",
+		"/home/cxhpc/data/wt/tomocupy-stream/_skbuild/linux-x86_64-3.13/cmake-build/src/cmake_install.cmake",
+		"/home/cxhpc/data/wt/tomocupy-stream/_skbuild/linux-x86_64-3.13/cmake-build/src/cuda/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
