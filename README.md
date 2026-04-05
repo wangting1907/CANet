@@ -75,6 +75,12 @@ Citation
 -------
 If you find our work useful in your research, please cite:
 
-
+@article{wang2026data,
+  title={Data-driven deformation correction in X-ray spectro-tomography with implicit neural networks},
+  author={Wang, Ting and Yan, Zipei and Pan, Hongyi and Zhang, Kai and Ng, Michael K-P and Yu, Xiqian and Wang, Chao and Li, Jizhou},
+  journal={Patterns},
+  year={2026},
+  publisher={Elsevier}
+}
 
 
