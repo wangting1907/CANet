@@ -1,0 +1,32 @@
+# ==========================================================
+# CANet Tomographic Alignment Configuration (Strict Version)
+# ==========================================================
+
+paths:
+  data_path: "./Data/tomo_data/data_8346.npy"
+  sim_path: "./Data/tomo_data/data_8346.npy"  
+  save_dir_prefix: "mat_results"             
+
+model:
+  type: "siren"
+  hidden_features: 256
+  hidden_layers: 3
+  temperature: 20.0
+  k_out: 2            
+
+training:
+  iters: 10            
+  epochs: 200          
+  lr: 1.0e-4
+  wd: 0.0
+  mode: "bicubic"      
+  cuda: true
+  eval_freq: 100
+  seed: 42
+
+loss:
+  ffl_weight: 3.0      
+  alpha: 1.0       
+geometry:
+  theta_start: 0
+  theta_end: 180

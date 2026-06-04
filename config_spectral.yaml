@@ -1,0 +1,26 @@
+# ==========================================================
+# CANet Tomographic Alignment Configuration
+# ==========================================================
+paths:
+  txt_dir: "./Data/XANES_00089/AC3_C4p6_3DXANES/AC3_C4p6_3DXANES_TOMO-XANES.txt"
+  highest_proj: "./Data/XANES_00089/highest_energy/alignment_8346.mat"
+  result_dir: "./Data/XANES_00089/alignment_result/"
+  log_dir_root: "./runs"
+
+model:
+  type: "siren"
+  hidden_features: 256
+  hidden_layers: 3
+  scaling: true       
+
+training:
+  lr: 1.0e-4
+  wd: 0.0
+  epochs: 200
+  seed: 42
+  cuda: true
+
+loss:
+  gamma1: 3.0         
+  gamma2: 1.0         
+  lambda_corr: 0.1    
