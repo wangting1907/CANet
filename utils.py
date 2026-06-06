@@ -113,7 +113,6 @@ def background_remove(sim):
     correct_data = np.zeros((c, 402, 331))
     correct_data1 = np.zeros((c, 331, 402))
     sim = np.transpose(sim, (0, 2, 1))
-    
     # Background removal
     for i in range(c):
         ttpp = sim[i, :, :]
@@ -126,33 +125,26 @@ def background_remove(sim):
         flipped_img = np.fliplr(tmp1_cropped)  
         imgii = resize(flipped_img, (402, 331))
         correct_data[i, :, :] = imgii
-    
     correct_data = np.transpose(correct_data, (0, 2, 1))
     
     for i in range(c):
         imgii = correct_data[i, :, :]
-        
         # Smooth profiles using Gaussian filter
         top_profile = gaussian_filter(np.mean(imgii[:10, :], axis=0), sigma=2)
-        bottom_profile = gaussian_filter(np.mean(imgii[-10:, :], axis=0), sigma=2.5)
-        
+        bottom_profile = gaussian_filter(np.mean(imgii[-10:, :], axis=0), sigma=2.5)  
         diff_profile = bottom_profile - top_profile
-        
         # Create background
         height = imgii.shape[0]
         background = np.zeros_like(imgii)
-        
         for jj in range(imgii.shape[1]):
             # Use a polynomial fit instead of linear interpolation
             x = np.linspace(0, height - 1, height)
             fit = np.polyfit(x, np.linspace(top_profile[jj], bottom_profile[jj], height), deg=2)
             background[:, jj] = np.polyval(fit, x)
-        
         # Subtract background and set negative values to zero
         imgii_bkg_removed = imgii - background
         imgii_bkg_removed[imgii_bkg_removed < 0] = 0
         correct_data1[i, :, :] = imgii_bkg_removed
-    
     return correct_data1   
 
 def process_projection_data(data):
