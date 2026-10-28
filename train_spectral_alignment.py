@@ -14,7 +14,7 @@ import scipy.io as scio
 from inr import models
 from focal_frequency_loss import FocalFrequencyLoss as FFL
 from utils import *
-from proprecessing import *
+from preprecessing import *
 
 def apply_batch_affine_transform(images, shifts, scaling_factors, mode='bilinear', scaling=True):
     device = images.device
