@@ -152,7 +152,7 @@ def main():
     sim_data = np.load(sim_path).astype('float32')
     c, h, w = proj_data.shape
 
-    theta = np.deg2rad(np.linspace(cfg['geometry']['theta_start'], cfg['geometry']['theta_end'], c)).astype('float32')
+    theta =(np.linspace(cfg['geometry']['theta_start'], cfg['geometry']['theta_end'], c)).astype('float32')
     
     dark = np.zeros([1, h, w], dtype='float32')
     flat = np.ones([1, h, w], dtype='float32')
