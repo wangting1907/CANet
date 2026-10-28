@@ -1,6 +1,6 @@
 #!/bin/bash
 DEVICE="0"
-CONFIG_FILE="config_spectral.yaml"
+CONFIG_FILE="configs/config_spectral.yaml"
 ENERGY_START=0
 ENERGY_END=66
 
